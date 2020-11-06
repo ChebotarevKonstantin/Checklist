@@ -10,9 +10,10 @@ const registration = async (e) => {
   const position = e.target.position.value
   const department = e.target.department.value
   const dateStartWork = e.target.dateStartWork.value
+  const id = e.target._id.value
   
   const body = JSON.stringify({
-    userSurname, userName, patronymic, password,  position, department, dateStartWork
+    userSurname, userName, patronymic, password,  position, department, dateStartWork, id
   })
   const {method, action} = e.target
 

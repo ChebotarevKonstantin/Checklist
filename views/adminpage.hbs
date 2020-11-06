@@ -17,36 +17,29 @@
     <div class="col-1 bold"># п/п</div>
     <div class="col-1 bold">Статус</div>
     <div class="col-2 bold">Фамилия</div>
-    <div class="col-2 bold">Имя</div>
+    <div class="col-1 bold">Имя</div>
     <div class="col-2 bold">Отдел</div>
     <div class="col-2 bold">Должность</div>
     <div class="col-2 bold">дата приема на работы</div>
+    <div class="col-1 bold"></div>
+
   </div>
   <hr>
+
     <div class="row"> 
     {{#each users}}  
     <div class="col-1">    <p>-</p>    </div>  
     <div class="col-1">    <p>{{this.role}}</p>  </div>
     <div class="col-2">    <p>{{this.userSurname}}</p>  </div> 
-    <div class="col-2">    <p>{{this.userName}}</p>  </div> 
+    <div class="col-1">    <p>{{this.userName}}</p>  </div> 
     <div class="col-2">    <p>{{this.department}}</p>  </div>
     <div class="col-2">    <p>{{this.position}}</p>  </div>
     <div class="col-2">    <p>{{this.dateStartWork}}</p>  </div>
+    <div class="col-1">    <button onclick="window.location.href = 'http://localhost:5000/edit/{{this.id}}';"  class="btn btn-secondary">&nbsp; Редактировать &nbsp;</button>  </div>
     {{/each}}
  </div> 
 </div>
 
-<form id='update' class="signin-form" action="/auth/login" method="post">
-                <div class="form-group mt-5">
-                    <input type="text" name="userName" class="form-control" placeholder="Имя">
-                </div>
-                <div class="form-group mt-3">
-                    <input type="password" name="password" class="form-control"
-                           placeholder="Пароль" required>
-                </div>
-                <div class="text-center mt-3">
-                    <button type="submit" class="btn btn-secondary">&nbsp; Войти &nbsp;</button>
-                </div>
-            </form>
+
 
 
