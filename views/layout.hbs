@@ -1,0 +1,82 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>NIIVS</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Our JS -->
+    <script defer src="/js/login.js"></script>
+    <script defer src="/js/registration.js"></script>
+
+  </head>
+  <body>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  
+
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-sm navbar-light bg-faded">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#nav-content"
+          aria-controls="nav-content"
+          aria-expanded="false"
+          aria-label="Переключатель навигации"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Бренд -->
+        <a class="navbar-brand" href="/">NIIVS</a>
+        <!-- Ссылки -->
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="nav-content"
+        >
+          <ul class="navbar-nav">
+
+ {{#if Inlogin}}
+    <li class="nav-item">
+              <a class="nav-link" href="/auth/account/{{id}}">Account</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="/">Checklist</a>
+            </li>
+        <li class="nav-item">
+              <a class="nav-link" href="/auth/logout">Logout</a>
+            </li>
+               {{else}}
+          <li class="nav-item">
+              <a class="nav-link" href="/auth/login">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/auth/registration">Registration</a>
+            </li>
+        {{/if}}
+          </ul>
+        </div>
+      </nav>
+      <br />
+      {{{body}}}
+    </div>
+  
+  
+  </body>
+</html>
+
+

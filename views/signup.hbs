@@ -1,0 +1,44 @@
+<div class="container h-100">
+    <div class="row h-100 justify-content-center align-items-center">
+        <div class="col-10 col-md-8 col-lg-6">
+            <!-- Form -->
+            <form id="registration" class="signup-form" action="/auth/registration" method="post">
+                <div class="form-group mt-3">
+                    <input type="text" name="userSurname" class="form-control" placeholder="Фамилия" >
+                </div>
+                <div class="form-group mt-3">
+                    <input type="text" name="userName" class="form-control" placeholder="Имя" >
+                </div>
+                <div class="form-group mt-3">
+                    <input type="text" name="patronymic" class="form-control" placeholder="Отчество" >
+                </div>
+<div class="form-group col-md-6">
+                   </div>
+                <div class="form-group mt-3">
+                    <input type="password" name="password" class="form-control" placeholder="Пароль" >
+                </div>
+                <div class="form-group mt-3">
+                    <input type="text" name="position" class="form-control" placeholder="Должность" >
+                </div>
+                   <label for="selectCond">Ваш отдел</label>
+            <select id="selectCond" name="department" class="form-control">
+              <option selected>Выберите отдет</option>
+              <option value="Отдел кадров">Отдел кадров</option>
+              <option value="Производственно-техничесий отдел">Производственно-техничесий отдел</option>
+              <option value="Отдел продаж">Отдел продаж</option>
+            </select>
+                                 <div class="form-group mt-3">
+                    Дата начала работы
+                </div>
+                <div class="form-group mt-3">
+                    <input type="date" name="dateStartWork" class="form-control" placeholder="Дата начала работы" >
+                </div>
+
+                <div class="text-center mt-3">
+                    <button type="submit" class="btn btn-secondary">&nbsp; Зарегистрироваться &nbsp;</button>
+                </div>
+            </form>
+            <!-- Form end -->
+        </div>
+    </div>
+</div>

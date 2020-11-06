@@ -1,0 +1,52 @@
+{{!-- <script defer src="/js/adminpage.js"></script> --}}
+
+
+<div class="container h-100">
+  <div class="row h-100 justify-content-center align-items-center">
+    <div class="col-10 col-md-10 col-lg-10">
+      <h3>Страница администратора {{userName}}</h3>
+      <p>____________________________________________</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <p>Сотрудники:</p>
+  <div class="row">
+    <div class="col-1 bold"># п/п</div>
+    <div class="col-1 bold">Статус</div>
+    <div class="col-2 bold">Фамилия</div>
+    <div class="col-2 bold">Имя</div>
+    <div class="col-2 bold">Отдел</div>
+    <div class="col-2 bold">Должность</div>
+    <div class="col-2 bold">дата приема на работы</div>
+  </div>
+  <hr>
+    <div class="row"> 
+    {{#each users}}  
+    <div class="col-1">    <p>-</p>    </div>  
+    <div class="col-1">    <p>{{this.role}}</p>  </div>
+    <div class="col-2">    <p>{{this.userSurname}}</p>  </div> 
+    <div class="col-2">    <p>{{this.userName}}</p>  </div> 
+    <div class="col-2">    <p>{{this.department}}</p>  </div>
+    <div class="col-2">    <p>{{this.position}}</p>  </div>
+    <div class="col-2">    <p>{{this.dateStartWork}}</p>  </div>
+    {{/each}}
+ </div> 
+</div>
+
+<form id='update' class="signin-form" action="/auth/login" method="post">
+                <div class="form-group mt-5">
+                    <input type="text" name="userName" class="form-control" placeholder="Имя">
+                </div>
+                <div class="form-group mt-3">
+                    <input type="password" name="password" class="form-control"
+                           placeholder="Пароль" required>
+                </div>
+                <div class="text-center mt-3">
+                    <button type="submit" class="btn btn-secondary">&nbsp; Войти &nbsp;</button>
+                </div>
+            </form>
+
+

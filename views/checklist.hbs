@@ -1,0 +1,26 @@
+ <div class="container">
+   
+
+ <script defer src="/js/checkbox.js"></script>
+ 
+ <div  class="row">
+  <div class="col-1 bold">Статус</div>
+  <div class="col-5 bold">Задание</div>
+  <div class="col-2 bold">Срок исполнения</div>
+  <div class="col-1 bold">Оценка</div>
+  <div class="col-3 bold">Наcтавник</div>
+</div>
+  <hr>
+
+<div class="row">
+  {{#each tasks}}
+  <div class="col-1 ">
+    <input class="check" type="checkbox" id="{{this._id}}" checked={{this.completed}}/>
+  </div>
+  <div id='left' class="col-5"><p>{{this.taskText}}</p></div>
+  <div class="col-2" type='date'><p>{{this.taskDateFinish}}</p></div>
+  <div class="col-1"><p>{{this.mark}}</p></div>
+  <div class="col-3"><p>{{this.control}}</p></div>
+  {{/each}}
+</div>
+ </div>
